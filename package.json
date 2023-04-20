@@ -1,0 +1,31 @@
+{
+  "main": "./dist/server/worker.js",
+  "scripts": {
+    "test": "vitest",
+    "dev": "vite dev",
+    "prod": "npm run build && wrangler dev --port 3000",
+    "deploy": "npm run build && wrangler publish",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "~0.2.0",
+    "@cloudflare/wrangler": "^1.19.5",
+    "@vitejs/plugin-react": "^1.1.3",
+    "buffer-es6": "^4.9.3",
+    "esbuild": "^0.17.17",
+    "express": "^4.17.1",
+    "miniflare": "^2.6.0",
+    "node-fetch": "^2.6.1",
+    "process-es6": "^0.11.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "vite": "^3.0.4",
+    "vite-plugin-cloudflare": "^0.4.0",
+    "vite-plugin-ssr": "0.4.18"
+  },
+  "name": "vite-plugin-ssr",
+  "version": "0.0.0",
+  "devDependencies": {
+    "wrangler": "^2.0.25"
+  }
+}
